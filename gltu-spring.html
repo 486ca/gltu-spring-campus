@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLTU Campus in Spring 🌷</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #e8f5e9, #fff3e0);
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: rgba(255,255,255,0.9);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2e7d32;
+            font-size: 2.2rem;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .img-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        .campus-img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .game-section {
+            background: #f1f8e9;
+            border-left: 5px solid #4caf50;
+        }
+        .btn {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #388e3c;
+        }
+        #result {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        audio, video {
+            width: 100%;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌷 GLTU Campus in Spring 🌷</h1>
+        <p class="subtitle">A Spring Tour of Guilin Tourism University</p>
+    </header>
+
+    <div class="container">
+        <!-- 1. 带音频的图文介绍 -->
+        <div class="card">
+            <h2>🌸 Spring at GLTU</h2>
+            <p>Spring turns Guilin Tourism University into a vibrant green campus. Blooming flowers, green willows, and fresh air fill every corner. Students walk under blooming trees, study by the lake, and enjoy the warm spring sunshine.</p>
+            <div class="img-container">
+                <img class="campus-img" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Spring campus view">
+                <img class="campus-img" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="University building in spring">
+            </div>
+            <p>Listen to the sounds of spring on campus:</p>
+            <audio controls>
+                <source src="https://www.soundjay.com/nature/sounds/birds-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            
+        </div>
+
+        <!-- 2. 互动小游戏 -->
+        <div class="card game-section">
+            <h2>🎮 Spring Quiz Game</h2>
+            <p>Test your knowledge about GLTU in spring!</p>
+            <p>Q: What is the most famous flower blooming on GLTU campus in early spring?</p>
+            <button class="btn" onclick="checkAnswer('peach')">Peach Blossom</button>
+            <button class="btn" onclick="checkAnswer('cherry')">Cherry Blossom</button>
+            <button class="btn" onclick="checkAnswer('sunflower')">Sunflower</button>
+            <div id="result"></div>
+        </div>
+
+        <!-- 3. 视频介绍 -->
+        <div class="card">
+            <h2>🎥 Spring Campus Tour</h2>
+            <p>Watch a short tour of GLTU's spring scenery:</p>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        <p>Theme: Introduce GLTU campus in Spring season | AI Tool: Doubao</p>
+    </footer>
+
+    <script>
+        function checkAnswer(answer) {
+            const result = document.getElementById('result');
+            if (answer === 'peach') {
+                result.textContent = "✅ Correct! Peach blossoms are one of the most beautiful flowers on GLTU campus in early spring!";
+                result.style.color = "#2e7d32";
+            } else {
+                result.textContent = "❌ Oops, try again! Hint: It's pink and blooms early!";
+                result.style.color = "#d32f2f";
+            }
+        }
+    </script>
+</body>
+</html>
